@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B1E32AB235BC1F80082122F /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AA235BC1F80082122F /* Plugin.swift */; };
 		2B1E32AF235BCE8C0082122F /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AE235BCE8C0082122F /* utils.swift */; };
+		2B75D4B3235C8A7B002D8FA5 /* Plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0F7B772105CBC30028CF34 /* Plugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FA29E473215E7D2300C9F60C /* ESDConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */; };
 		FA29E474215E7D2300C9F60C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46F215E7D2300C9F60C /* main.m */; };
 		FA80591421623A0D00ED7E12 /* ESDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80591321623A0D00ED7E12 /* ESDUtilities.m */; };
@@ -38,12 +39,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		FA0F7B752105CBC30028CF34 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /Users/jarno/dev/streamdeck/appswitcher/Sources/me.hckr.appswitcher.sdPlugin;
 			dstSubfolderSpec = 0;
 			files = (
+				2B75D4B3235C8A7B002D8FA5 /* Plugin in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -311,7 +313,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA0F7B722105CBC30028CF34 /* Build configuration list for PBXProject "StreamDeckPlugin" */;
+			buildConfigurationList = FA0F7B722105CBC30028CF34 /* Build configuration list for PBXProject "AppSwitcher" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -492,7 +494,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.companyname.pluginname;
+				PRODUCT_BUNDLE_IDENTIFIER = me.hckr.streamdeck.appswitcher;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -514,7 +516,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.companyname.pluginname;
+				PRODUCT_BUNDLE_IDENTIFIER = me.hckr.streamdeck.appswitcher;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -526,7 +528,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA0F7B722105CBC30028CF34 /* Build configuration list for PBXProject "StreamDeckPlugin" */ = {
+		FA0F7B722105CBC30028CF34 /* Build configuration list for PBXProject "AppSwitcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA0F7B7C2105CBC30028CF34 /* Debug */,

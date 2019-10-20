@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FA0F7B762105CBC30028CF34"
                BuildableName = "Plugin"
                BlueprintName = "Plugin"
-               ReferencedContainer = "container:StreamDeckPlugin.xcodeproj">
+               ReferencedContainer = "container:AppSwitcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,10 +31,10 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      launchStyle = "0"
+      launchStyle = "1"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "FA0F7B762105CBC30028CF34"
             BuildableName = "Plugin"
             BlueprintName = "Plugin"
-            ReferencedContainer = "container:StreamDeckPlugin.xcodeproj">
+            ReferencedContainer = "container:AppSwitcher.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "FA0F7B762105CBC30028CF34"
             BuildableName = "Plugin"
             BlueprintName = "Plugin"
-            ReferencedContainer = "container:StreamDeckPlugin.xcodeproj">
+            ReferencedContainer = "container:AppSwitcher.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

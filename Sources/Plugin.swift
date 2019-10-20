@@ -1,8 +1,8 @@
 //
 //  Plugin.swift
-//  A plug-in for Stream Deck
+//  AppSwitcher is a plugin for Stream Deck to easily switch between opened apps.
 //
-//  Created by Jarno Le Conté on 19/10/2019.
+//  Created by Jarno Le Conté on 20/10/2019.
 //  Copyright © 2019 Jarno Le Conté. All rights reserved.
 //
 

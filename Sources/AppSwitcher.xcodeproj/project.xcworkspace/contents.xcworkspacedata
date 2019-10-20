@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/jarno/dev/streamdeck/findertags/Sources/StreamDeckPlugin.xcodeproj">
+      location = "self:/Users/jarno/dev/streamdeck/appswitcher/Sources/AppSwitcher.xcodeproj">
    </FileRef>
 </Workspace>
