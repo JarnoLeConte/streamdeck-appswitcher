@@ -5,7 +5,7 @@
       "Name": "App Switcher",
       "States": [
           {
-              "Image": "images/PluginIcon"
+              "Image": "images/KeyIcon"
           }
       ],
       "SupportedInMultiActions": false,
@@ -16,15 +16,17 @@
   "SDKVersion": 2,
   "Author": "Jarno Le Conté",
   "CodePath": "Plugin",
-  "Description": "An alternative to Command+Tab to switch between opened apps easily",
+  "Description": "Alternative to Command+Tab to switch between opened apps easily",
   "Name": "App Switcher",
   "Icon": "images/PluginIcon",
   "URL": "https://github.com/JarnoLeConte/streamdeck-appswitcher",
+  "Category": "Productivity",
+  "CategoryIcon": "images/CategoryIcon",
   "Version": "1.0",
   "OS": [
     {
         "Platform": "mac",
-        "MinimumVersion" : "10.11"
+        "MinimumVersion" : "10.12"
     }
   ],
   "Software":

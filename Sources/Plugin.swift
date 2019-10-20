@@ -10,14 +10,58 @@ import Foundation
 
 public class Plugin: NSObject, ESDEventsProtocol {
     var connectionManager: ESDConnectionManager?;
-    var knownContexts: [Any] = [];
+    var timer : Timer?;
     
+    func executeAppleScript(source: String) {
+        var error: NSDictionary?
+        let script = NSAppleScript.init(source: source);
+        script?.executeAndReturnError(&error)
+        if error != nil {
+            NSLog("AppleScript ERROR");
+        }
+    }
+    
+    func wakeUp() {
+        // Make an initial call to System Events
+        // 1. This will ensure sequential calls to be handled more quickly
+        // 2. The first time user have to give permission to access System Events
+        executeAppleScript(source: """
+            tell application "System Events"
+            end tell
+            """);
+    }
+    
+    func performSwitchStep() {
+        executeAppleScript(source: """
+             tell application "System Events"
+             key down command
+             keystroke tab
+             end tell
+             """);
+        
+        // Reset confirmation time
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+
+        // Confirm selection after time interval
+        timer =  Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false, block: { timer in
+            // Confirm selection
+            self.executeAppleScript(source: """
+                tell application "System Events"
+                key up command
+                end tell
+                """);
+         });
+    }
+     
     public func setConnectionManager(_ connectionManager: ESDConnectionManager) {
         self.connectionManager = connectionManager;
     }
     
     public func keyDown(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
-        // Nothing to do
+        performSwitchStep()
     }
     
     public func keyUp(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
@@ -25,13 +69,11 @@ public class Plugin: NSObject, ESDEventsProtocol {
     }
     
     public func willAppear(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
-        // Add the context to the list of known contexts
-        knownContexts.append(context)
+        wakeUp();
     }
     
     public func willDisappear(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
-        // Remove the context from the list of known contexts
-        knownContexts.removeAll { isEqualContext($0, context) }
+        // Nothing to do
     }
     public func deviceDidConnect(_ deviceID: String, withDeviceInfo deviceInfo: [AnyHashable : Any]) {
         // Nothing to do
