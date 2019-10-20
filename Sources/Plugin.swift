@@ -46,7 +46,7 @@ public class Plugin: NSObject, ESDEventsProtocol {
         }
 
         // Confirm selection after time interval
-        timer =  Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false, block: { timer in
+        timer =  Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { timer in
             // Confirm selection
             self.executeAppleScript(source: """
                 tell application "System Events"
